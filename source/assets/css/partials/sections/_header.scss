@@ -1,0 +1,44 @@
+$p_base: 30px;
+.main-header{
+	@extend .cf;
+	padding: $p_base;
+	a.logo{
+		display: block;
+		font-size: 14px;
+		color: $c_brand-light;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	.header-grid{
+		@extend .cf;
+		margin: 30px 0px 30px 0px;
+		p{
+			float: left;
+			color: #fff;
+			line-height: 1.8;
+			padding: 0px $p_base 0px 0px;
+			max-width: 60%;
+		}
+		img{
+			float: right;
+			width: 40%;
+			display: block;
+		}
+	}
+	nav{
+		a{
+			display: block;
+			padding: 30px 0px 30px 0px;
+			color: $c_brand-light;
+			border-bottom: 1px solid #fff;
+			text-decoration: none;
+			@include easing(350ms);
+			&:hover{
+				@include easing(350ms);
+				background-color: #fff;
+				padding: 30px 0px 30px 30px;
+				color: $c_mid-selection;
+			}
+		}
+	}
+}

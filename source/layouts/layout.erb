@@ -9,6 +9,9 @@
 		<%= stylesheet_link_tag "styles" %>
 	</head>
 	<body class="<%= page_classes %>">
-		<%= yield %>
+		<div class="grid">
+			<%= yield %>
+		</div>
+		<%= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
 	</body>
 </html>
