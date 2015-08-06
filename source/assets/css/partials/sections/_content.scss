@@ -1,0 +1,60 @@
+// Hack as fuck
+.un,
+.do,
+.twa,
+.qua{position: fixed;background-color: $c_purp;}
+.un{height: 10px;left: 0px;right: 0px;top: 0px;}
+.do{width: 10px;top: 0px;bottom: 0px;right: 0px;}
+.twa{height: 10px;left: 0px;right: 0px;bottom: 0px;}
+.qua{width: 10px;top: 0px;bottom: 0px;left: 0px;}
+.narrow{
+	max-width: 250px;
+	margin: 100px auto 0px auto;
+	img{max-width: 100%;height: auto;border: 5px solid #111;}
+	h1{
+		font-family: $f_head;
+		color: $c_brand;
+		padding: 0px 0px 40px 0px;
+	}
+	h3{
+		font-family: $f_head;
+		color: $c_head;
+		line-height: 1.5;
+		padding: 40px 0px 0px 0px;
+	}
+	h2{
+		font-family: $f_head;
+		padding: 40px 0px 0px 0px;
+		color: $c_purp;
+	}
+	p{
+		font-family: $f_sans;
+		color: $c_text;
+		line-height: 1.5;
+		padding: 40px 0px 0px 0px;
+	}
+	nav{
+		padding: 40px 0px 0px 0px;
+		a{
+			display: inline-block;
+			margin: 0px 10px 0px 0px;
+			color: $c_brand;
+			text-decoration: none;
+			padding: 0px 0px 3px 0px;
+			border-bottom: 1px solid $c_brand;
+			@include easing(350ms);
+			&:hover{
+				@include easing(350ms);
+				color: #000;
+				border-bottom: 1px solid #000;
+			}
+		}
+	}
+}
+// Page specific nesting
+.about{
+	.narrow{
+		margin: 100px auto;
+		p{padding: 20px 0px 0px 0px;&:first-of-type{padding: 40px 0px 0px 0px;}}
+	}
+}

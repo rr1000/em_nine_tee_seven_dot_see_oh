@@ -1,0 +1,14 @@
+@media handheld, only screen and (max-width: 650px){
+	.about{.narrow{margin: 60px auto;}}
+	.narrow{
+		margin: 60px auto;
+		max-width: 180px;
+		nav{
+			a{
+				display: block;
+				margin: 0px 0px 10px 0px;
+				&:last-of-type{margin: 0px 0px 0px 0px;}
+			}
+		}
+	}
+}

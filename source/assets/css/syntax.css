@@ -1,0 +1,44 @@
+<%= Rouge::Themes::Base16::Monokai.render(:scope => '.highlight') %>
+@import url(//fonts.googleapis.com/css?family=Inconsolata:400,700);
+td code,
+li code,
+p code{
+	background-color: #f4f4f4;
+	border: 1px solid #ddd;
+	padding: 5px;
+	color: #ca2657;
+	border-radius: 3px;
+	font-size: 13px;
+	font-family: 'Inconsolata', 'Source Code Pro', monospace, sans-serif;
+	line-height: 3;
+}
+table code{
+	background-color: #f4f4f4;
+	border: 1px solid #ddd;
+	padding: 2px 5px;
+	color: #ca2657;
+	border-radius: 3px;
+	font-size: 12px;
+	font-family: 'Inconsolata', 'Source Code Pro', monospace, sans-serif;
+	line-height: 2;
+}
+pre{
+	margin: 10px;
+	padding: 10px;
+	background-color: #33273D;
+	border-radius: 3px;
+	font-size: 13px;
+	font-family: 'Inconsolata', 'Source Code Pro', monospace, sans-serif;
+	overflow: scroll;
+}
+.highlight,
+.highlight .w,
+pre code.highlight{
+	background-color: #33273D;
+}
+pre code.highlight{
+	padding: 0px;
+	font-size: 13px;
+	font-family: 'Inconsolata', 'Source Code Pro', monospace, sans-serif;
+	overflow-x: scroll;
+}
