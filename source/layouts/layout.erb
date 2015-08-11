@@ -24,13 +24,9 @@
 		<%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 	</head>
 	<body class="<%= page_classes %>">
-		<div class="un"></div>
-		<div class="do"></div>
-		<div class="twa"></div>
-		<div class="qua"></div>
 		<!-- Content -->
 		<%= yield %>
 		<!-- /Content -->
-		<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
+		<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "two", "url", "main" %>
 	</body>
 </html>

@@ -1,60 +1,56 @@
-// Hack as fuck
-.un,
-.do,
-.twa,
-.qua{position: fixed;background-color: $c_purp;}
-.un{height: 10px;left: 0px;right: 0px;top: 0px;}
-.do{width: 10px;top: 0px;bottom: 0px;right: 0px;}
-.twa{height: 10px;left: 0px;right: 0px;bottom: 0px;}
-.qua{width: 10px;top: 0px;bottom: 0px;left: 0px;}
-.narrow{
-	max-width: 250px;
-	margin: 100px auto 0px auto;
-	img{max-width: 100%;height: auto;border: 5px solid #111;}
-	h1{
-		font-family: $f_head;
-		color: $c_brand;
-		padding: 0px 0px 40px 0px;
-	}
-	h3{
-		font-family: $f_head;
-		color: $c_head;
-		line-height: 1.5;
-		padding: 40px 0px 0px 0px;
-	}
-	h2{
-		font-family: $f_head;
-		padding: 40px 0px 0px 0px;
-		color: $c_purp;
-	}
-	p{
-		font-family: $f_sans;
-		color: $c_text;
-		line-height: 1.5;
-		padding: 40px 0px 0px 0px;
-	}
-	nav{
-		padding: 40px 0px 0px 0px;
+// Globals
+body{@include easing(350ms);}
+::-moz-selection{background-color: #fff;color: #111;}
+::selection{background-color: #fff;color: #111;}
+.dont-move{
+	background-color: $c_brand;
+	width: 10px;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	position: fixed;
+}
+// Pages
+.index{ background-color: $c_dark; }
+ul.work{
+	padding: 50px;
+	li{
+		display: block;
+		position: relative;
+		span.type{
+			color: #fff;
+			position: absolute;
+			font-family: $f_sans-alt;
+			font-weight: 300;
+			bottom: 7px;
+			font-size: 12px;
+		}
+		span.about{
+			color: $c_purp;
+			position: absolute;
+			font-family: $f_sans-alt;
+			font-weight: 300;
+			bottom: 7px;
+			font-size: 20px;
+			right: 0px;
+			@include easing(350ms);
+		}
+		span.false-idols{right: 30px;}
 		a{
-			display: inline-block;
-			margin: 0px 10px 0px 0px;
-			color: $c_brand;
+			display: block;
 			text-decoration: none;
-			padding: 0px 0px 3px 0px;
-			border-bottom: 1px solid $c_brand;
+			color: #fff;
+			border-bottom: 1px solid rgba(255,255,255, 0.6);
+			padding: 0px 0px 20px 0px;
+			margin: 0px 0px 20px 0px;
+			font-size: 80px;
+			font-weight: 100;
 			@include easing(350ms);
 			&:hover{
 				@include easing(350ms);
-				color: #000;
-				border-bottom: 1px solid #000;
+				padding-left: 30px;
+				color: $c_brand;
 			}
 		}
-	}
-}
-// Page specific nesting
-.about{
-	.narrow{
-		margin: 100px auto;
-		p{padding: 20px 0px 0px 0px;&:first-of-type{padding: 40px 0px 0px 0px;}}
 	}
 }

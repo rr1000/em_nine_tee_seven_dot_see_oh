@@ -43,3 +43,9 @@
 	-webkit-box-shadow: $s;
 	box-shadow: $s;
 }
+@mixin rotate($r){
+	-webkit-transform: rotate($r);
+	-moz-transform: rotate($r);
+	-ms-transform: rotate($r);
+	-o-transform: rotate($r);
+}
