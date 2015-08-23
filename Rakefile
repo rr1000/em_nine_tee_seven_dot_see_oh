@@ -6,7 +6,7 @@ task :build do
 end
 
 desc "RUN MIDDLEMAN SERVER"
-task :view do
+task :run do
   system("middleman server -p 2113")
 end
 

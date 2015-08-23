@@ -1,6 +1,17 @@
-<section class="blog">
-	<% blog.articles[0...10].each do |article| %>
-		<%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %>
-		<%= article.summary %>
-	<% end %>
-</section>
+<%= partial "partials/logo" %>
+<%= partial "partials/contact" %>
+<%= partial "partials/navs/writing" %>
+<div class="inner">
+	<h1 class="title">writings on design, engineering and philosophy</h1>
+	<ul>
+		<% blog.articles[0...100].each do |article| %>
+		<li>
+			<a href="<%= article.url %>">
+				<span class="type"><%= article.date.strftime( '%b • %e • %Y' ) %></span>
+				<span class="name"><%= article.title %></span>
+				<span class="desc"><%= article.data.one_liner %></span>
+			</a>
+		</li>
+		<% end %>
+	</ul>
+</div>

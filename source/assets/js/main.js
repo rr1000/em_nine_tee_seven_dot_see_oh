@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
-	var listItem = $('ul.work li');
+	var listItem = $('.index ul li');
 
 	listItem.hover(function(){
 
 		var itemType = $(this).find('.type');
-		var itemAbout = $(this).find('.about');
+		var itemAbout = $(this).find('.desc');
 
-		itemType.fadeToggle(250);
 		itemAbout.toggleClass('false-idols');
+		itemType.toggleClass('false-idols');
 
 	});
 

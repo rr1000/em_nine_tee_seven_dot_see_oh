@@ -15,14 +15,14 @@ activate :syntax, :wrap => true
 
 # Blog Settings
 activate :blog do |blog|
-  blog.prefix = "blog"
+  blog.prefix = "writing"
   # blog.permalink = "blog/{year}/{title}.html"
   blog.sources = "{year}-{month}-{day}-{title}.html"
   blog.taglink = "{tag}.html"
   # blog.layout = "layout_blog"
   blog.summary_length = 250
-  blog.tag_template = "blog/tag.html"
-  blog.calendar_template = "blog/calendar.html"
+  blog.tag_template = "writing/tag.html"
+  blog.calendar_template = "writing/calendar.html"
 end
 
 # Sitemap Settings

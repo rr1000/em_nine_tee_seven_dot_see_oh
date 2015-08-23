@@ -2,54 +2,165 @@
 body{@include easing(350ms);}
 ::-moz-selection{background-color: #fff;color: #111;}
 ::selection{background-color: #fff;color: #111;}
-.dont-move{
-	background-color: $c_brand;
-	width: 10px;
-	left: 0px;
-	top: 0px;
-	bottom: 0px;
+.more{
+	border: 1px solid #FAFF84;
+	padding: 10px;
+	width: 200px;
 	position: fixed;
-}
-// Pages
-.index{ background-color: $c_dark; }
-ul.work{
-	padding: 50px;
-	li{
-		display: block;
-		position: relative;
-		span.type{
-			color: #fff;
-			position: absolute;
-			font-family: $f_sans-alt;
-			font-weight: 300;
-			bottom: 7px;
-			font-size: 12px;
-		}
-		span.about{
-			color: $c_purp;
-			position: absolute;
-			font-family: $f_sans-alt;
-			font-weight: 300;
-			bottom: 7px;
-			font-size: 20px;
-			right: 0px;
-			@include easing(350ms);
-		}
-		span.false-idols{right: 30px;}
+	left: 20px;
+	bottom: 20px;
+	@include easing(350ms);
+	@include opacity(0.3);
+	&:hover{
+		@include easing(350ms);
+		@include opacity(1.0);
+		cursor: crosshair;
+	}
+	p{
+		font-family: $f_sans-alt;
+		font-size: 12px;
+		color: #FAFF84;
+		line-height: 1.5;
 		a{
-			display: block;
+			color: lighten($c_dark, 60%);
 			text-decoration: none;
-			color: #fff;
-			border-bottom: 1px solid rgba(255,255,255, 0.6);
-			padding: 0px 0px 20px 0px;
-			margin: 0px 0px 20px 0px;
-			font-size: 80px;
-			font-weight: 100;
 			@include easing(350ms);
 			&:hover{
 				@include easing(350ms);
-				padding-left: 30px;
-				color: $c_brand;
+				color: $c_purp;
+			}
+		}
+	}
+}
+.main-logo{
+	max-width: 130px;
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	img{max-width: 80%;height:auto;}
+}
+// Pages
+.index{
+	max-width: 600px;
+	margin: auto;
+	background-color: $c_dark;
+	position: relative;
+	.dont-move{
+		max-width: 100px;
+		position: fixed;
+		margin: 49px 0px 0px -50px;
+		img{display: block;max-width: 90%;height: auto;}
+		nav{
+			a{
+				font-size: 12px;
+				color: #fff;
+				display: block;
+				border-bottom: 1px dotted lighten($c_dark, 30%);
+				margin: 0px 0px 20px 0px;
+				padding: 0px 0px 20px 0px;
+				text-decoration: none;
+				@include easing(350ms);
+				&:hover{
+					@include easing(350ms);
+					color: $c_purp;
+				}
+			}
+			a.active{color: $c_purp;}
+		}
+	}
+	h1.title{
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		padding: 50px 20px 0px 20px;
+		font-size: 12px;
+		color: $c_brand;
+		text-decoration: none;
+		font-family: $f_head;
+		display: block;
+		@include easing(350ms);
+		&:hover{
+			@include easing(350ms);
+		}
+	}
+	ul{
+		padding: 50px 20px;
+		li{
+			display: block;
+			padding: 0px 0px 20px 0px;
+			margin: 0px 0px 20px 0px;
+			border-bottom: 1px dotted lighten($c_dark, 30%);
+			&:last-of-type{border-bottom: 0px;}
+			a{
+				display: block;
+				text-decoration: none;
+				position: relative;
+				@extend .cf;
+				@include easing(350ms);
+				&:hover{
+					@include easing(350ms);
+					padding-right: 30px;
+				}
+				span.type{
+					font-family: $f_sans-alt;
+					font-weight: 400;
+					font-size: 12px;
+					color: #fff;
+					display: block;
+					text-align: right;
+					position: absolute;
+					right: 0px;
+					@include easing(350ms);
+				}
+				span.name{
+					text-align: right;
+					display: block;
+					font-size: 40px;
+					color: #fff;
+					padding: 20px 0px 20px 0px;
+				}
+				span.desc{
+					text-align: right;
+					display: block;
+					color: lighten($c_dark, 30%);
+					position: absolute;
+					right: 0px;
+					bottom: -5px;
+					@include easing(350ms);
+				}
+				span.false-idols{@include easing(350ms);color: $c_brand;}
+			}
+		}
+	}
+}
+.about{
+	@extend .index;
+	.inner{
+		img{
+			padding: 20px;
+			max-width: 100%;
+			height: auto;
+		}
+		p{
+			font-size: 14px;
+			line-height: 2;
+			color: #fff;
+			font-family: $f_sans-alt;
+			padding: 20px;
+			span{color: #DD3603;}
+			a{color: $c_brand;padding: 0px 0px 3px 0px;border-bottom: 1px solid $c_brand;text-decoration: none;}
+		}
+	}
+}
+.writing{
+	@extend .index;
+	ul{
+		li{
+			a{
+				span.name{font-size: 20px;@include easing(350ms);}
+				&:hover{
+					@include easing(350ms);
+					span.name{@include easing(350ms); color: #84FFCC;padding-right: 0px;}
+				}
 			}
 		}
 	}
