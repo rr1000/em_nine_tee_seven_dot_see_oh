@@ -1,0 +1,12 @@
+@import url(//fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,700);
+
+@font-face{
+	font-family: 'ap';
+	src: url('../fonts/ap.otf');
+}
+
+$f_bu: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, sans-serif;
+$f_a: 'Work Sans', $f_bu;
+$f_b: 'ap', $f_bu;
+
+body{font-family: $f_a;}

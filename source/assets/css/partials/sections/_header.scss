@@ -1,0 +1,93 @@
+.main-header{
+	@extend .cf;
+	position: relative;
+	.logo{
+		position: fixed;
+		display: block;
+		left: 30px;
+		top: 30px;
+		img{
+			display: block;
+			width: 60px;
+			height: auto;
+		}
+	}
+	nav{
+		position: fixed;
+		right: 30px;
+		top: 30px;
+		a{
+			font-size: 12px;
+			text-decoration: none;
+			font-weight: 400;
+			color: $c_a;
+			padding: 0px 0px 5px 0px;
+			border-bottom: 1px solid transparent;
+			margin: 0px 0px 0px 20px;
+			&:first-of-type{margin: 0px;}
+			@include easing(350ms);
+			&:hover{
+				@include easing(350ms);
+				border-bottom: 1px solid $c_d;
+				color: $c_d;
+			}
+		}
+	}
+}
+// Page Specific Overrides
+.about{
+	.main-header{
+		nav{
+			a{color: $c_c;}
+		}
+	}
+}
+.newton{
+	.main-header{
+		nav{
+			a{color: $c_newton;}
+		}
+	}
+}
+.engineering-blog{
+	.main-header{
+		nav{
+			a{color: $c_eng-blog;}
+		}
+	}
+}
+.plaid{
+	.main-header{
+		nav{
+			a{color: $c_plaid;}
+		}
+	}
+}
+.hipaagram{
+	.main-header{
+		nav{
+			a{color: $c_hipaagram;}
+		}
+	}
+}
+.resources{
+	.main-header{
+		nav{
+			a{color: $c_resources;}
+		}
+	}
+}
+.dashboard{
+	.main-header{
+		nav{
+			a{color: $c_dashboard;}
+		}
+	}
+}
+.writing{
+	.main-header{
+		nav{
+			a{color: $c_g;}
+		}
+	}
+}

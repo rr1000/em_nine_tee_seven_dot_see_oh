@@ -1,0 +1,24 @@
+.main-footer{
+	padding: 0px 0px $p_a 0px;
+	ul{
+		li{
+			display: inline-block;
+			a{
+				font-size: 12px;
+				text-decoration: none;
+				font-weight: 400;
+				color: $c_f;
+				border-bottom: 1px solid transparent;
+				display: inline-block;
+				padding: 0px 0px 5px 0px;
+				margin: 0px 0px 0px 20px;
+				@include easing(350ms);
+				&:hover{
+					@include easing(350ms);
+					border-bottom: 1px solid $c_d;
+					color: $c_d;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,190 @@
+// Top Stroke Colors
+body.dashboard{border-top: 5px solid $c_dashboard;}
+body.resources{border-top: 5px solid $c_resources;}
+body.hipaagram{border-top: 5px solid $c_hipaagram;}
+body.plaid{border-top: 5px solid $c_plaid;}
+body.engineering-blog{border-top: 5px solid $c_eng-blog;}
+body.newton{border-top: 5px solid $c_newton;}
+body.index{border-top: 5px solid $c_a;}
+body.about{border-top: 5px solid $c_c;}
+body.writing{border-top: 5px solid $c_g;}
+
+// Random Shit
+span.hr{
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: $c_a;
+}
+span.hr-about{background-color: $c_c;}
+span.hr-newton{background-color: $c_newton;}
+span.hr-eng-blog{background-color: $c_eng-blog;}
+span.hr-plaid{background-color: $c_plaid;}
+span.hr-hipaagram{background-color: $c_hipaagram;}
+span.hr-resources{background-color: $c_resources;}
+span.hr-dashboard{background-color: $c_dashboard;}
+span.hr-writing{background-color: $c_d;}
+
+// Content
+$p_a: 30px;
+$p_b: 20px;
+.content-intro{
+	margin: $p_a 0px;
+	p{
+		font-size: 12px;
+		line-height: 1.5;
+		color: $c_d;
+		span{color: $c_a;}
+		padding: 0px 0px $p_a 0px;
+	}
+	ul{
+		li{
+			display: inline-block;
+			padding: 0px $p_b 0px 0px;
+			color: $c_a;
+			font-size: 12px;
+		}
+	}
+	h1.title{
+		font-family: $f_b;
+		padding: 0px 0px $p_a 0px;
+		color: $c_a;
+	}
+}
+.content-main{
+	margin: $p_a 0px;
+	h1{
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 600;
+		color: $c_d;
+		letter-spacing: 2px;
+	}
+	p{
+		font-size: 12px;
+		line-height: 1.5;
+		color: $c_d;
+		span{color: $c_a;}
+		padding: $p_a 0px 0px 0px;
+	}
+	img{
+		display: block;
+		max-width: 100%;
+		padding: $p_a 0px 0px 0px;
+	}
+	.big-list{
+		padding: $p_a 0px 0px 0px;
+		article{
+			padding: $p_b 0px $p_b 0px;
+			border-bottom: 1px solid $c_d;
+			h2{
+				a{
+					font-size: 20px;
+					display: block;
+					text-decoration: none;
+					font-family: $f_b;
+					@include easing(350ms);
+					&:hover{
+						@include easing(350ms);
+						padding: 0px 0px 0px $p_b;
+						color: $c_d;
+					}
+				}
+			}
+			&:first-of-type{padding: 0px 0px $p_b 0px;}
+		}
+		footer{
+			padding: $p_b 0px 0px 0px;
+			@extend .cf;
+			span{
+				display: block;
+				font-size: 12px;
+				color: $c_d;
+			}
+			span.type{float: left;}
+			span.desc{float: right;}
+			.false-idols{background-color: #FCFFBF;}
+		}
+	}
+}
+.content-work{
+	@extend .content-main;
+	img{
+		display: block;
+		max-width: 1000px;
+		width: 100%;
+		margin: auto;
+		padding: $p_a 0px 0px 0px;
+	}
+}
+.content-words{
+	@extend .content-main;
+	.base{
+		img{max-width: 100%;height:auto;}
+		img.prof{padding: 10px;margin: 0px 20px 20px 0px;border: 5px solid $c_c;max-width: 250px;float: left;}
+		p{
+			font-size: 12px;
+			line-height: 1.5;
+			color: $c_d;
+			span{color: $c_a;}
+			padding: $p_a 0px 0px 0px;
+		}
+	}
+}
+// Page Specific Overrides
+.about{
+	.content-intro{
+		p{span{color: $c_c;}}
+		h1{color: $c_c;}
+		ul{li{color: $c_c;}}
+	}
+}
+.newton{
+	.content-intro{
+		p{span{color: $c_newton;}}
+		h1{color: $c_newton;}
+		ul{li{color: $c_newton;}}
+	}
+}
+.engineering-blog{
+	.content-intro{
+		p{span{color: $c_eng-blog;}}
+		h1{color: $c_eng-blog;}
+		ul{li{color: $c_eng-blog;}}
+	}
+}
+.plaid{
+	.content-intro{
+		p{span{color: $c_plaid;}}
+		h1{color: $c_plaid;}
+		ul{li{color: $c_plaid;}}
+	}
+}
+.hipaagram{
+	.content-intro{
+		p{span{color: $c_hipaagram;}}
+		h1{color: $c_hipaagram;}
+		ul{li{color: $c_hipaagram;}}
+	}
+}
+.resources{
+	.content-intro{
+		p{span{color: $c_resources;}}
+		h1{color: $c_resources;}
+		ul{li{color: $c_resources;}}
+	}
+}
+.dashboard{
+	.content-intro{
+		p{span{color: $c_dashboard;}}
+		h1{color: $c_dashboard;}
+		ul{li{color: $c_dashboard;}}
+	}
+}
+.writing{
+	.content-intro{
+		p{span{color: $c_g;}}
+		h1{color: $c_g;}
+		ul{li{color: $c_g;}}
+	}
+}
