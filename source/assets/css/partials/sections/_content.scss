@@ -55,6 +55,25 @@ $p_b: 20px;
 		padding: 0px 0px $p_a 0px;
 		color: $c_a;
 	}
+	a.proj-cta{
+		display: block;
+		text-decoration: none;
+		font-size: 14px;
+		text-align: center;
+		width: 235px;
+		margin: 0px 0px 20px 0px;
+		background-color: $c_a;
+		@include border-radius(5px);
+		border: 1px solid $c_a;
+		padding: 10px;
+		color: #fff;
+		@include easing(350ms);
+		&:hover{
+			@include easing(350ms);
+			background-color: #fff;
+			color: $c_a;
+		}
+	}
 }
 .content-main{
 	margin: $p_a 0px;
